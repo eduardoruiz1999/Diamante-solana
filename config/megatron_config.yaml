@@ -1,0 +1,25 @@
+# Configuración del entrenamiento
+base_model: "QuixiAI/WizardLM-13B-Uncensored"
+adapter_model: "DeepDemon/MegaSol"
+
+# Configuración paralela
+tensor_parallel: 4
+pipeline_parallel: 2
+world_size: 8
+
+# Hiperparámetros
+micro_batch_size: 4
+global_batch_size: 256
+learning_rate: 6e-5
+epochs: 10
+warmup_steps: 1000
+
+# Configuración Solana
+solana_network: "mainnet-beta"
+dmt_token_address: "${DMT_TOKEN_ADDRESS}"
+reward_per_checkpoint: 1000  # DMT tokens por checkpoint
+
+# Configuración Triton
+triton_url: "localhost:8000"
+model_name: "diamante_llm"
+precision: "fp16"
