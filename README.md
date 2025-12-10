@@ -1,5 +1,7 @@
 # Diamante-solana
 
+git  clone https://github.com/eduardoruiz1999/Diamante-solana
+
 # .env file 
 WALLET_PRIVATE_KEY=tu_nueva_llave_privada
 DMT_TOKEN_ADDRESS=5zJo2GzYRgiZw5j3SBNpuqVcGok35kT3ADwsw74yJWV6
