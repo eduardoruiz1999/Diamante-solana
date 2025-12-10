@@ -23,8 +23,13 @@ def generate_ui():
         
         return f"Código generado:\n\n{code}\n\nTX: {tx_hash}"
     
+    # Vercel Web Analytics integration
+    vercel_analytics_head = """
+    <script defer src="/_vercel/insights/script.js"></script>
+    """
+    
     # Interfaz Gradio
-    with gr.Blocks(title="Diamante Megatron Generator") as demo:
+    with gr.Blocks(title="Diamante Megatron Generator", head=vercel_analytics_head) as demo:
         gr.Markdown("# 🚀 Generador de Código con DMT")
         gr.Markdown("Usa tokens DMT para generar código con WizardLM + Megatron")
         
